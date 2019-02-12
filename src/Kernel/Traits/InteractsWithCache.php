@@ -1,9 +1,12 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: fcdna
- * Date: 2019-01-29
- * Time: 21:27
+
+/*
+ * This file is part of the strays/baidu-ai.
+ *
+ * (c) strays <784494731@qq.com>
+ *
+ * This source file is subject to the MIT license that is bundled
+ * with this source code in the file LICENSE.
  */
 
 namespace Strays\BaiDuAia\Kernel\Traits;
@@ -13,14 +16,14 @@ use Symfony\Component\Cache\Simple\FilesystemCache;
 trait InteractsWithCache
 {
     /**
-     * 缓存实例
+     * 缓存实例.
      *
      * @var
      */
     protected $cache;
 
     /**
-     * 获取缓存
+     * 获取缓存.
      *
      * @return FilesystemCache
      */
@@ -34,9 +37,10 @@ trait InteractsWithCache
     }
 
     /**
-     * 设置缓存
+     * 设置缓存.
      *
      * @param $cache
+     *
      * @return $this
      */
     public function setCache($cache)
@@ -47,7 +51,7 @@ trait InteractsWithCache
     }
 
     /**
-     * 创建默认缓存
+     * 创建默认缓存.
      *
      * @return FilesystemCache
      */

@@ -1,9 +1,12 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: fcdna
- * Date: 2019-01-29
- * Time: 20:07
+
+/*
+ * This file is part of the strays/baidu-ai.
+ *
+ * (c) strays <784494731@qq.com>
+ *
+ * This source file is subject to the MIT license that is bundled
+ * with this source code in the file LICENSE.
  */
 
 namespace Strays\BaiDuAia\Kernel\Providers;
@@ -15,7 +18,7 @@ use Strays\BaiDuAia\Kernel\Config;
 class ConfigServiceProvider implements ServiceProviderInterface
 {
     /**
-     * 将配置信息注入到容器中
+     * 将配置信息注入到容器中.
      *
      * @param Container $pimple
      */

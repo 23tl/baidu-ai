@@ -1,14 +1,15 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: fcdna
- * Date: 2019-01-30
- * Time: 16:55
+
+/*
+ * This file is part of the strays/baidu-ai.
+ *
+ * (c) strays <784494731@qq.com>
+ *
+ * This source file is subject to the MIT license that is bundled
+ * with this source code in the file LICENSE.
  */
 
 namespace Strays\BaiDuAia\Kernel\Contracts;
-
-use Psr\Http\Message\RequestInterface;
 
 interface AccessTokenInterface
 {

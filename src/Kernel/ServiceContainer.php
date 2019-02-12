@@ -1,13 +1,15 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: fcdna
- * Date: 2019-01-29
- * Time: 19:55
+
+/*
+ * This file is part of the strays/baidu-ai.
+ *
+ * (c) strays <784494731@qq.com>
+ *
+ * This source file is subject to the MIT license that is bundled
+ * with this source code in the file LICENSE.
  */
 
 namespace Strays\BaiDuAia\Kernel;
-
 
 use Pimple\Container;
 use Strays\BaiDuAia\Kernel\Providers\ConfigServiceProvider;
@@ -31,7 +33,7 @@ class ServiceContainer extends Container
     }
 
     /**
-     * 返回配置信息
+     * 返回配置信息.
      *
      * @return array
      */
@@ -48,20 +50,19 @@ class ServiceContainer extends Container
     }
 
     /**
-     * 将核心服务注入劲容器
+     * 将核心服务注入劲容器.
      *
      * @param array $providers
      */
     public function registerProviders(array $providers)
     {
-        foreach ($providers as $provider)
-        {
+        foreach ($providers as $provider) {
             parent::register(new $provider());
         }
     }
 
     /**
-     * 将服务合并成一个数组
+     * 将服务合并成一个数组.
      *
      * @return array
      */

@@ -1,13 +1,15 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: fcdna
- * Date: 2019-01-29
- * Time: 19:30
+
+/*
+ * This file is part of the strays/baidu-ai.
+ *
+ * (c) strays <784494731@qq.com>
+ *
+ * This source file is subject to the MIT license that is bundled
+ * with this source code in the file LICENSE.
  */
 
 namespace Strays\BaiDuAia\Kernel\Support;
-
 
 class Str
 {
@@ -17,13 +19,12 @@ class Str
 
     protected static $studlyCache = [];
 
-
-
     public static function camel($value)
     {
         if (isset(static::$camelCache[$value])) {
             return static::$camelCache[$value];
         }
+
         return static::$camelCache[$value] = lcfirst(static::studly($value));
     }
 
@@ -35,6 +36,7 @@ class Str
             $bytes = static::randomBytes($size);
             $string .= substr(str_replace(['/', '+', '='], '', base64_encode($bytes)), 0, $size);
         }
+
         return $string;
     }
 
@@ -45,17 +47,19 @@ class Str
         } elseif (function_exists('openssl_random_pseudo_bytes')) {
             $bytes = openssl_random_pseudo_bytes($length, $strong);
             if (false === $bytes || false === $strong) {
-               // throw new RuntimeException('Unable to generate random string.');
+                // throw new RuntimeException('Unable to generate random string.');
             }
         } else {
             // throw new RuntimeException('OpenSSL extension is required for PHP 5 users.');
         }
+
         return $bytes;
     }
 
     public static function quickRandom($length = 16)
     {
         $pool = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
         return substr(str_shuffle(str_repeat($pool, $length)), 0, $length);
     }
 
@@ -78,6 +82,7 @@ class Str
         if (!ctype_lower($value)) {
             $value = strtolower(preg_replace('/(.)(?=[A-Z])/', '$1'.$delimiter, $value));
         }
+
         return static::$snakeCache[$key] = trim($value, '_');
     }
 
@@ -88,7 +93,7 @@ class Str
             return static::$studlyCache[$key];
         }
         $value = ucwords(str_replace(['-', '_'], ' ', $value));
+
         return static::$studlyCache[$key] = str_replace(' ', '', $value);
     }
-
 }

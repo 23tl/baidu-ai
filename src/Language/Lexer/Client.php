@@ -1,22 +1,25 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: fcdna
- * Date: 2019-01-30
- * Time: 14:22
+
+/*
+ * This file is part of the strays/baidu-ai.
+ *
+ * (c) strays <784494731@qq.com>
+ *
+ * This source file is subject to the MIT license that is bundled
+ * with this source code in the file LICENSE.
  */
 
 namespace Strays\BaiDuAia\Language\Lexer;
-
 
 use Strays\BaiDuAia\Kernel\BaseClient;
 
 class Client extends BaseClient
 {
     /**
-     * 词法分析
+     * 词法分析.
      *
      * @param string $text
+     *
      * @return string
      */
     public function send(string $text)
@@ -29,8 +32,10 @@ class Client extends BaseClient
     }
 
     /**
-     * 词法分析定制
+     * 词法分析定制.
+     *
      * @param string $text
+     *
      * @return string
      */
     public function custom(string $text)

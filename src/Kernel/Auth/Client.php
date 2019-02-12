@@ -1,9 +1,12 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: fcdna
- * Date: 2019-01-30
- * Time: 17:21
+
+/*
+ * This file is part of the strays/baidu-ai.
+ *
+ * (c) strays <784494731@qq.com>
+ *
+ * This source file is subject to the MIT license that is bundled
+ * with this source code in the file LICENSE.
  */
 
 namespace Strays\BaiDuAi\Kernel\Auth;
@@ -12,5 +15,4 @@ use Strays\BaiDuAi\Kernel\AccessToken;
 
 class Client extends AccessToken
 {
-
 }

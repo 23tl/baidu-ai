@@ -9,7 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Strays\BaiDuAia\Language\DepParser;
+namespace Strays\BaiDuAi\Language\DepParser;
 
 use Pimple\Container;
 use Pimple\ServiceProviderInterface;

@@ -9,7 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Strays\BaiDuAia\Kernel\Traits;
+namespace Strays\BaiDuAi\Kernel\Traits;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -60,6 +60,18 @@ trait HttpRequests
 
             unset($options['json']);
             unset($options['query']);
+        }
+
+        if (isset($options['from']) && is_array($options['from'])) {
+            $options['headers'] = array_merge($options['headers'] ?? [], ['Content-Type' => 'application/x-www-form-urlencoded']);
+            $options['form_params'] = array_merge($options['body'] ?? [], $options['from']);
+
+            unset($options['from']);
+            unset($options['query']);
+        }
+
+        if (!$this->app['config']->get('ssl')) {
+            $options['verify'] = false;
         }
 
         return $options;

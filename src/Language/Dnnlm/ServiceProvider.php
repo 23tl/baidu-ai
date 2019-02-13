@@ -9,7 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Strays\BaiDuAia\Language\Dnnlm;
+namespace Strays\BaiDuAi\Language\Dnnlm;
 
 use Pimple\Container;
 use Pimple\ServiceProviderInterface;

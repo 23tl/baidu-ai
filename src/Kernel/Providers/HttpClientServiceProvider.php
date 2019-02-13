@@ -9,7 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Strays\BaiDuAia\Kernel\Providers;
+namespace Strays\BaiDuAi\Kernel\Providers;
 
 use GuzzleHttp\Client;
 use Pimple\Container;

@@ -9,9 +9,9 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Strays\BaiDuAia;
+namespace Strays\BaiDuAi;
 
-use Strays\BaiDuAia\Kernel\Support\Str;
+use Strays\BaiDuAi\Kernel\Support\Str;
 
 class Factory
 {
@@ -19,7 +19,7 @@ class Factory
     {
         $namespace = Str::studly($name);
 
-        $application = "\\Strays\\BaiDuAia\\{$namespace}\\Application";
+        $application = "\\Strays\\BaiDuAi\\{$namespace}\\Application";
 
         return new $application($config);
     }

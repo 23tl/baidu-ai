@@ -9,9 +9,9 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Strays\BaiDuAia\Language\Simnet;
+namespace Strays\BaiDuAi\Language\Simnet;
 
-use Strays\BaiDuAia\Kernel\BaseClient;
+use Strays\BaiDuAi\Kernel\BaseClient;
 
 class Client extends BaseClient
 {

@@ -9,12 +9,12 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Strays\BaiDuAia\Kernel;
+namespace Strays\BaiDuAi\Kernel;
 
 use Pimple\Container;
-use Strays\BaiDuAia\Kernel\Contracts\AccessTokenInterface;
-use Strays\BaiDuAia\Kernel\Traits\HttpRequests;
-use Strays\BaiDuAia\Kernel\Traits\InteractsWithCache;
+use Strays\BaiDuAi\Kernel\Contracts\AccessTokenInterface;
+use Strays\BaiDuAi\Kernel\Traits\HttpRequests;
+use Strays\BaiDuAi\Kernel\Traits\InteractsWithCache;
 
 class AccessToken implements AccessTokenInterface
 {
@@ -26,7 +26,7 @@ class AccessToken implements AccessTokenInterface
 
     protected $requestUrl = 'https://aip.baidubce.com/oauth/2.0/token';
 
-    protected $cacheKey = 'BaiDuAia.kernel.access_token';
+    protected $cacheKey = 'BaiDuAi.kernel.access_token';
 
     protected static $status = false;
 
@@ -91,8 +91,8 @@ class AccessToken implements AccessTokenInterface
     {
         return [
             'grant_type' => 'client_credentials',
-            'client_id' => $this->app['config']->get('client_id'),
-            'client_secret' => $this->app['config']->get('client_secret'),
+            'client_id' => $this->app['config']->get('apiKey'),
+            'client_secret' => $this->app['config']->get('secretKey'),
         ];
     }
 }

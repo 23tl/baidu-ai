@@ -9,9 +9,9 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Strays\BaiDuAia\Language\Topic;
+namespace Strays\BaiDuAi\Language\Topic;
 
-use Strays\BaiDuAia\Kernel\BaseClient;
+use Strays\BaiDuAi\Kernel\BaseClient;
 
 class Client extends BaseClient
 {

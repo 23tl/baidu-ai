@@ -9,7 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Strays\BaiDuAia\Language\WordSimEmbedding;
+namespace Strays\BaiDuAi\Language\WordSimEmbedding;
 
 use Pimple\Container;
 use Pimple\ServiceProviderInterface;

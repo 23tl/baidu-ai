@@ -9,9 +9,9 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Strays\BaiDuAia\Language;
+namespace Strays\BaiDuAi\Language;
 
-use Strays\BaiDuAia\Kernel\ServiceContainer;
+use Strays\BaiDuAi\Kernel\ServiceContainer;
 
 class Application extends ServiceContainer
 {
@@ -28,6 +28,6 @@ class Application extends ServiceContainer
         Topic\ServiceProvider::class,
 
         // 认证
-        \Strays\BaiDuAia\Kernel\Auth\ServiceProvider::class,
+        \Strays\BaiDuAi\Kernel\Auth\ServiceProvider::class,
     ];
 }

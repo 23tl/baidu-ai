@@ -1,6 +1,6 @@
 {
-    "name": "strays\/baidu-ai",
-    "description": "Package description here.",
+    "name": "strays/baidu-ai",
+    "description": "百度自然语言处理、文本审核、图片审核等...",
     "license": "MIT",
     "authors": [
         {
@@ -16,7 +16,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Strays\\BaiduAi\\": "src"
+            "Strays\\BaiDuAi\\": "./src/"
         }
     }
 }

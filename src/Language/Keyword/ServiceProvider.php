@@ -9,7 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Strays\BaiDuAia\Language\Keyword;
+namespace Strays\BaiDuAi\Language\Keyword;
 
 use Pimple\Container;
 use Pimple\ServiceProviderInterface;

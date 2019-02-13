@@ -9,7 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Strays\BaiDuAia\Kernel\Support;
+namespace Strays\BaiDuAi\Kernel\Support;
 
 use ArrayAccess;
 use ArrayIterator;

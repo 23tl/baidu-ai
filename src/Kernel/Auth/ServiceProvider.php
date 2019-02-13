@@ -9,7 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Strays\BaiDuAia\Kernel\Auth;
+namespace Strays\BaiDuAi\Kernel\Auth;
 
 use Pimple\Container;
 use Pimple\ServiceProviderInterface;

@@ -9,7 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Strays\BaiDuAia\Kernel\Traits;
+namespace Strays\BaiDuAi\Kernel\Traits;
 
 use Symfony\Component\Cache\Simple\FilesystemCache;
 

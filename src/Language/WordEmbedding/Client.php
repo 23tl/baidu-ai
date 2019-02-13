@@ -9,9 +9,9 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Strays\BaiDuAia\Language\WordEmbedding;
+namespace Strays\BaiDuAi\Language\WordEmbedding;
 
-use Strays\BaiDuAia\Kernel\BaseClient;
+use Strays\BaiDuAi\Kernel\BaseClient;
 
 class Client extends BaseClient
 {

@@ -9,7 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Strays\BaiDuAia\Kernel\Contracts;
+namespace Strays\BaiDuAi\Kernel\Contracts;
 
 interface AccessTokenInterface
 {

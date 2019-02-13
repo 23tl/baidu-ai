@@ -9,9 +9,9 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Strays\BaiDuAia\Kernel;
+namespace Strays\BaiDuAi\Kernel;
 
-use Strays\BaiDuAia\Kernel\Support\Collection;
+use Strays\BaiDuAi\Kernel\Support\Collection;
 
 class Config extends Collection
 {

@@ -9,7 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Strays\BaiDuAia\Language\Simnet;
+namespace Strays\BaiDuAi\Language\Simnet;
 
 use Pimple\Container;
 use Pimple\ServiceProviderInterface;

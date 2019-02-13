@@ -9,11 +9,11 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Strays\BaiDuAia\Kernel;
+namespace Strays\BaiDuAi\Kernel;
 
 use Pimple\Container;
-use Strays\BaiDuAia\Kernel\Providers\ConfigServiceProvider;
-use Strays\BaiDuAia\Kernel\Providers\HttpClientServiceProvider;
+use Strays\BaiDuAi\Kernel\Providers\ConfigServiceProvider;
+use Strays\BaiDuAi\Kernel\Providers\HttpClientServiceProvider;
 
 class ServiceContainer extends Container
 {
@@ -41,7 +41,7 @@ class ServiceContainer extends Container
     {
         $base = [
             'http' => [
-                'timeout' => 5,
+                'timeout' => 3.14,
                 'base_uri' => 'https://aip.baidubce.com',
             ],
         ];

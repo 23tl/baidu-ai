@@ -9,23 +9,17 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Strays\BaiDuAi\Kernel\Providers;
+namespace Strays\BaiDuAi\Review\Image;
 
 use Pimple\Container;
 use Pimple\ServiceProviderInterface;
-use Strays\BaiDuAi\Kernel\Config;
 
-class ConfigServiceProvider implements ServiceProviderInterface
+class ServiceProvider implements ServiceProviderInterface
 {
-    /**
-     * 将配置信息注入到容器中.
-     *
-     * @param Container $pimple
-     */
     public function register(Container $pimple)
     {
-        $pimple['config'] = function ($app) {
-            return new Config($app->getConfig());
+        $pimple['image'] = function ($app) {
+            return new Client($app);
         };
     }
 }

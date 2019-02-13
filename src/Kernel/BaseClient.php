@@ -9,10 +9,10 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Strays\BaiDuAia\Kernel;
+namespace Strays\BaiDuAi\Kernel;
 
-use Strays\BaiDuAia\Kernel\Contracts\AccessTokenInterface;
-use Strays\BaiDuAia\Kernel\Traits\HttpRequests;
+use Strays\BaiDuAi\Kernel\Contracts\AccessTokenInterface;
+use Strays\BaiDuAi\Kernel\Traits\HttpRequests;
 
 class BaseClient
 {
@@ -40,6 +40,11 @@ class BaseClient
     public function httpPostJson(string $url, array $data = [], array $query = [])
     {
         return $this->request($this->getBaseUrl($url), 'POST', ['query' => $query, 'json' => $data]);
+    }
+
+    public function httpPostFrom(string $url, array $data = [], array $query = [])
+    {
+        return $this->request($this->getBaseUrl($url), 'POST', ['query' => $query, 'from' => $data]);
     }
 
     protected function request(string $url, string $method, array $body = [], array $options = [])

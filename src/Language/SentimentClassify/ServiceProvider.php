@@ -9,7 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Strays\BaiDuAia\Language\SentimentClassify;
+namespace Strays\BaiDuAi\Language\SentimentClassify;
 
 use Pimple\Container;
 use Pimple\ServiceProviderInterface;

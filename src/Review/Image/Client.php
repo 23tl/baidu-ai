@@ -17,8 +17,10 @@ use function Strays\BaiDuAi\Kernel\hasBase64;
 class Client extends BaseClient
 {
     /**
-     * Gif 图片审核
+     * Gif 图片审核.
+     *
      * @param string $base
+     *
      * @return string
      */
     public function antiPornGif(string $base)
@@ -31,8 +33,10 @@ class Client extends BaseClient
     }
 
     /**
-     * 用户头像审核
+     * 用户头像审核.
+     *
      * @param string $base
+     *
      * @return string
      */
     public function faceAudit(string $base)
@@ -49,9 +53,11 @@ class Client extends BaseClient
     }
 
     /**
-     * 组合服务接口
+     * 组合服务接口.
+     *
      * @param string $base
      * @param string $scenes
+     *
      * @return string
      */
     public function imageCensorComb(string $base, array $scenes = [])
@@ -70,8 +76,10 @@ class Client extends BaseClient
     }
 
     /**
-     * 自定义图像审核接口
+     * 自定义图像审核接口.
+     *
      * @param string $base
+     *
      * @return string
      */
     public function imageCensorUserDefined(string $base)

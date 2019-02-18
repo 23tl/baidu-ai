@@ -50,12 +50,10 @@ trait HttpRequests
     protected function fixJsonIssue(array $options): array
     {
         if (isset($options['json']) && is_array($options['json'])) {
-            $options['headers'] = array_merge($options['headers'] ?? [], ['Content-Type' => 'application/json']);
+            $options['headers'] = array_merge($options['headers'] ?? [], ['Content-Type' => 'application/json;charset=utf-8']);
 
-            if (empty($options['json'])) {
-                $options['body'] = mb_convert_encoding(\GuzzleHttp\json_encode($options['json'], JSON_UNESCAPED_UNICODE), 'GBK', 'UTF8');
-            } else {
-                $options['body'] = mb_convert_encoding(\GuzzleHttp\json_encode($options['json'], JSON_FORCE_OBJECT), 'GBK', 'UTF8');
+            if (!empty($options['json'])) {
+                $options['body'] = mb_convert_encoding(\GuzzleHttp\json_encode($options['json']), 'GBK', 'UTF8');
             }
 
             unset($options['json']);

@@ -17,6 +17,7 @@ class Application extends ServiceContainer
 {
     protected $providers = [
         Text\ServiceProvider::class,
+        Image\ServiceProvider::class,
 
         // 认证
         \Strays\BaiDuAi\Kernel\Auth\ServiceProvider::class,

@@ -17,6 +17,9 @@
     "autoload": {
         "psr-4": {
             "Strays\\BaiDuAi\\": "./src/"
-        }
+        },
+        "files": [
+            "src/Kernel/Helpers.php"
+        ]
     }
 }

@@ -16,6 +16,9 @@ use Pimple\ServiceProviderInterface;
 
 class ServiceProvider implements ServiceProviderInterface
 {
+    /**
+     * @param Container $pimple
+     */
     public function register(Container $pimple)
     {
         !isset($pimple['access_token']) && $pimple['access_token'] = function ($app) {

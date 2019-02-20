@@ -17,12 +17,26 @@ use Strays\BaiDuAi\Kernel\Providers\HttpClientServiceProvider;
 
 class ServiceContainer extends Container
 {
+    /**
+     * @var array
+     */
     protected $providers = [];
 
+    /**
+     * @var array
+     */
     protected $config = [];
 
+    /**
+     * @var array
+     */
     protected $defaultConfig = [];
 
+    /**
+     * ServiceContainer constructor.
+     * @param array $config
+     * @param array $prepends
+     */
     public function __construct(array $config = [], $prepends = [])
     {
         $this->registerProviders($this->getProviders());

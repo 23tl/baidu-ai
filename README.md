@@ -1,7 +1,6 @@
 <h1 align="center"> baidu-ai </h1>
 
-<p align="center"> .</p>
-
+<p align="center"> 免费强大的百度 AI 处理技术</p>
 
 ## Installing
 
@@ -11,7 +10,23 @@ $ composer require strays/baidu-ai -vvv
 
 ## Usage
 
-TODO
+基本使用（以服务端为例）:
+
+```php
+<?php
+
+use Strays\BaiDuAi\Factory;
+
+$config = [
+    'apiKey' => 'tPOG2OE7ZMrxCCRuOPl91jYB',
+    'secretKey' => 'nPe9swbS0iDh30OmAgEnhktmpRtyrWTF',
+    'ssl' => false,
+];
+
+$app = Factory::language($config);
+
+$result = $app->lexer->send('百度是一个伟大的公司');
+```
 
 ## Contributing
 

@@ -15,6 +15,9 @@ use Strays\BaiDuAi\Kernel\ServiceContainer;
 
 class Application extends ServiceContainer
 {
+    /**
+     * @var array
+     */
     protected $providers = [
         Lexer\ServiceProvider::class,
         Depparser\ServiceProvider::class,

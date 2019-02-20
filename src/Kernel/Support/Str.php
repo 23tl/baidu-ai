@@ -47,10 +47,10 @@ class Str
         } elseif (function_exists('openssl_random_pseudo_bytes')) {
             $bytes = openssl_random_pseudo_bytes($length, $strong);
             if (false === $bytes || false === $strong) {
-                // throw new RuntimeException('Unable to generate random string.');
+                throw new RuntimeException('Unable to generate random string.');
             }
         } else {
-            // throw new RuntimeException('OpenSSL extension is required for PHP 5 users.');
+            throw new RuntimeException('OpenSSL extension is required for PHP 5 users.');
         }
 
         return $bytes;

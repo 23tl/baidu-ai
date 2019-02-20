@@ -15,6 +15,13 @@ use Strays\BaiDuAi\Kernel\BaseClient;
 
 class Client extends BaseClient
 {
+    /**
+     * 词义相似度
+     * @param string $word_1
+     * @param string $word_2
+     * @param int $dem
+     * @return string
+     */
     public function send(string $word_1, string $word_2, int $dem = 0)
     {
         $body = [

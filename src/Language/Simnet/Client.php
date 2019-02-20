@@ -15,6 +15,13 @@ use Strays\BaiDuAi\Kernel\BaseClient;
 
 class Client extends BaseClient
 {
+    /**
+     * 短文本相似度
+     * @param string $text_1
+     * @param string $text_2
+     * @param string $model
+     * @return string
+     */
     public function send(string $text_1, string $text_2, string $model = 'BOW')
     {
         $body = [

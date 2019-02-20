@@ -13,5 +13,8 @@ namespace Strays\BaiDuAi\Kernel\Contracts;
 
 interface AccessTokenInterface
 {
+    /**
+     * @return mixed
+     */
     public function applyToRequest();
 }

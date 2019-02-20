@@ -15,6 +15,9 @@ use Strays\BaiDuAi\Kernel\ServiceContainer;
 
 class Application extends ServiceContainer
 {
+    /**
+     * @var array
+     */
     protected $providers = [
         Text\ServiceProvider::class,
         Image\ServiceProvider::class,

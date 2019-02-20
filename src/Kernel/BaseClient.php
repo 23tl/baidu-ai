@@ -18,14 +18,28 @@ class BaseClient
 {
     use HttpRequests { request as performRequest; }
 
+    /**
+     * @var ServiceContainer
+     */
     protected $app;
 
+    /**
+     * @var mixed|AccessTokenInterface
+     */
     protected $accessToken;
 
+    /**
+     * @var array
+     */
     protected static $defaults = [
         'charset' => 'UTF-8',
     ];
 
+    /**
+     * BaseClient constructor.
+     * @param ServiceContainer $app
+     * @param AccessTokenInterface|null $accessToken
+     */
     public function __construct(ServiceContainer $app, AccessTokenInterface $accessToken = null)
     {
         $this->app = $app;
@@ -33,36 +47,58 @@ class BaseClient
         $this->accessToken = $accessToken ?? $this->app['access_token'];
     }
 
-    public function postClient(string $url, array $body)
-    {
-    }
-
+    /**
+     * @param string $url
+     * @param array $data
+     * @param array $query
+     * @return string
+     */
     public function httpPostJson(string $url, array $data = [], array $query = [])
     {
         return $this->request($this->getBaseUrl($url), 'POST', ['query' => $query, 'json' => $data]);
     }
 
+    /**
+     * @param string $url
+     * @param array $data
+     * @param array $query
+     * @return string
+     */
     public function httpPostFrom(string $url, array $data = [], array $query = [])
     {
         return $this->request($this->getBaseUrl($url), 'POST', ['query' => $query, 'from' => $data]);
     }
 
-    protected function request(string $url, string $method, array $body = [], array $options = [])
+    /**
+     * @param string $url
+     * @param string $method
+     * @param array $options
+     * @return string
+     */
+    protected function request(string $url, string $method, array $options = [])
     {
         if (!$this->accessToken) {
             $this->getAccessToken();
         }
 
-        $response = $this->performRequest($url, $method, $body, $options);
+        $response = $this->performRequest($url, $method, $options);
 
         return $response->getBody()->getContents();
     }
 
+    /**
+     * @return mixed
+     */
     protected function getAccessToken()
     {
         return $this->accessToken->applyToRequest();
     }
 
+    /**
+     * 组装根url
+     * @param string $url
+     * @return string
+     */
     protected function getBaseUrl(string $url)
     {
         return $url.'?'.http_build_query(array_merge(self::$defaults, $this->getAccessToken()));

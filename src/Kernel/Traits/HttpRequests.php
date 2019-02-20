@@ -16,8 +16,17 @@ use GuzzleHttp\ClientInterface;
 
 trait HttpRequests
 {
+    /**
+     * @var
+     */
     protected $httpClient;
 
+    /**
+     * @param $url
+     * @param $method
+     * @param array $options
+     * @return mixed|\Psr\Http\Message\ResponseInterface
+     */
     public function request($url, $method, array $options = [])
     {
         $options = $this->fixJsonIssue($options);
@@ -27,6 +36,10 @@ trait HttpRequests
         return $response;
     }
 
+    /**
+     * @param ClientInterface $client
+     * @return $this
+     */
     public function setHttpClient(ClientInterface $client)
     {
         $this->httpClient = $client;
@@ -34,6 +47,9 @@ trait HttpRequests
         return $this;
     }
 
+    /**
+     * @return Client|ClientInterface
+     */
     public function getHttpClient()
     {
         if (!($this->httpClient instanceof ClientInterface)) {
@@ -47,6 +63,10 @@ trait HttpRequests
         return $this->httpClient;
     }
 
+    /**
+     * @param array $options
+     * @return array
+     */
     protected function fixJsonIssue(array $options): array
     {
         if (isset($options['json']) && is_array($options['json'])) {

@@ -15,6 +15,12 @@ use Strays\BaiDuAi\Kernel\BaseClient;
 
 class Client extends BaseClient
 {
+    /**
+     * 依存句法
+     * @param string $text
+     * @param int $mode
+     * @return string
+     */
     public function send(string $text, int $mode = 0)
     {
         $body = [

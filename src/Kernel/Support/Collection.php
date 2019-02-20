@@ -50,11 +50,8 @@ class Collection implements ArrayAccess, Countable, IteratorAggregate, JsonSeria
     }
 
     /**
-     * Return specific items.
-     *
      * @param array $keys
-     *
-     * @return \EasyWeChat\Kernel\Support\Collection
+     * @return Collection
      */
     public function only(array $keys)
     {
@@ -86,11 +83,8 @@ class Collection implements ArrayAccess, Countable, IteratorAggregate, JsonSeria
     }
 
     /**
-     * Merge data.
-     *
-     * @param Collection|array $items
-     *
-     * @return \EasyWeChat\Kernel\Support\Collection
+     * @param $items
+     * @return Collection
      */
     public function merge($items)
     {

@@ -16,6 +16,9 @@ use Pimple\ServiceProviderInterface;
 
 class ServiceProvider implements ServiceProviderInterface
 {
+    /**
+     * @param Container $pimple
+     */
     public function register(Container $pimple)
     {
         $pimple['simnet'] = function ($app) {

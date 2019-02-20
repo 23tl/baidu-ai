@@ -25,6 +25,7 @@ trait HttpRequests
      * @param $url
      * @param $method
      * @param array $options
+     *
      * @return mixed|\Psr\Http\Message\ResponseInterface
      */
     public function request($url, $method, array $options = [])
@@ -38,6 +39,7 @@ trait HttpRequests
 
     /**
      * @param ClientInterface $client
+     *
      * @return $this
      */
     public function setHttpClient(ClientInterface $client)
@@ -65,6 +67,7 @@ trait HttpRequests
 
     /**
      * @param array $options
+     *
      * @return array
      */
     protected function fixJsonIssue(array $options): array

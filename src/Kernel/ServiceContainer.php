@@ -34,6 +34,7 @@ class ServiceContainer extends Container
 
     /**
      * ServiceContainer constructor.
+     *
      * @param array $config
      * @param array $prepends
      */

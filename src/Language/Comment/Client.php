@@ -16,9 +16,11 @@ use Strays\BaiDuAi\Kernel\BaseClient;
 class Client extends BaseClient
 {
     /**
-     * 评论观点
+     * 评论观点.
+     *
      * @param string $text
-     * @param int $type
+     * @param int    $type
+     *
      * @return string
      */
     public function send(string $text, int $type = 4)

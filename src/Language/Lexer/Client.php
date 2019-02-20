@@ -17,7 +17,9 @@ class Client extends BaseClient
 {
     /**
      * 词法分析.
+     *
      * @param string $text
+     *
      * @return string
      */
     public function send(string $text)
@@ -31,7 +33,9 @@ class Client extends BaseClient
 
     /**
      * 词法分析定制.
+     *
      * @param string $text
+     *
      * @return string
      */
     public function custom(string $text)

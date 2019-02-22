@@ -6,7 +6,8 @@
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/23tl/baidu-ai/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/23tl/baidu-ai/?branch=master)
 [![Code Intelligence Status](https://scrutinizer-ci.com/g/23tl/baidu-ai/badges/code-intelligence.svg?b=master)](https://scrutinizer-ci.com/code-intelligence)
 [![StyleCI](https://github.styleci.io/repos/170268483/shield?branch=master)](https://github.styleci.io/repos/170268483)
-
+[![Latest Stable Version](https://poser.pugx.org/strays/baidu-ai/v/stable)](https://packagist.org/packages/strays/baidu-ai)
+[![License](https://poser.pugx.org/strays/baidu-ai/license)](https://packagist.org/packages/strays/baidu-ai)
 ## Installing
 
 ```shell

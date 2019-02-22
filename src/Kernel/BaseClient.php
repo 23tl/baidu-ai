@@ -37,7 +37,8 @@ class BaseClient
 
     /**
      * BaseClient constructor.
-     * @param ServiceContainer $app
+     *
+     * @param ServiceContainer          $app
      * @param AccessTokenInterface|null $accessToken
      */
     public function __construct(ServiceContainer $app, AccessTokenInterface $accessToken = null)
@@ -49,8 +50,9 @@ class BaseClient
 
     /**
      * @param string $url
-     * @param array $data
-     * @param array $query
+     * @param array  $data
+     * @param array  $query
+     *
      * @return string
      */
     public function httpPostJson(string $url, array $data = [], array $query = [])
@@ -60,8 +62,9 @@ class BaseClient
 
     /**
      * @param string $url
-     * @param array $data
-     * @param array $query
+     * @param array  $data
+     * @param array  $query
+     *
      * @return string
      */
     public function httpPostFrom(string $url, array $data = [], array $query = [])
@@ -72,7 +75,8 @@ class BaseClient
     /**
      * @param string $url
      * @param string $method
-     * @param array $options
+     * @param array  $options
+     *
      * @return string
      */
     protected function request(string $url, string $method, array $options = [])
@@ -95,8 +99,10 @@ class BaseClient
     }
 
     /**
-     * 组装根url
+     * 组装根url.
+     *
      * @param string $url
+     *
      * @return string
      */
     protected function getBaseUrl(string $url)

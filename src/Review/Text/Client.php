@@ -16,8 +16,10 @@ use Strays\BaiDuAi\Kernel\BaseClient;
 class Client extends BaseClient
 {
     /**
-     * 内容文本审核
+     * 内容文本审核.
+     *
      * @param string $text
+     *
      * @return string
      */
     public function send(string $text)

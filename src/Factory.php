@@ -18,6 +18,7 @@ class Factory
     /**
      * @param $name
      * @param array $config
+     *
      * @return mixed
      */
     public static function make($name, array $config)
@@ -32,6 +33,7 @@ class Factory
     /**
      * @param $name
      * @param $arguments
+     *
      * @return mixed
      */
     public static function __callStatic($name, $arguments)

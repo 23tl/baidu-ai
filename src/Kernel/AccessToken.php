@@ -47,6 +47,7 @@ class AccessToken implements AccessTokenInterface
 
     /**
      * AccessToken constructor.
+     *
      * @param Container $app
      */
     public function __construct(Container $app)
@@ -56,6 +57,7 @@ class AccessToken implements AccessTokenInterface
 
     /**
      * @return mixed|null
+     *
      * @throws \Psr\SimpleCache\InvalidArgumentException
      */
     public function getToken()
@@ -78,6 +80,7 @@ class AccessToken implements AccessTokenInterface
 
     /**
      * @param array $config
+     *
      * @return mixed
      */
     public function requestToken(array $config)
@@ -91,7 +94,9 @@ class AccessToken implements AccessTokenInterface
 
     /**
      * @param $token
+     *
      * @return array
+     *
      * @throws \Psr\SimpleCache\InvalidArgumentException
      */
     protected function setAccessToken($token)
@@ -107,6 +112,7 @@ class AccessToken implements AccessTokenInterface
 
     /**
      * @return mixed|null
+     *
      * @throws \Psr\SimpleCache\InvalidArgumentException
      */
     public function applyToRequest()
@@ -118,6 +124,7 @@ class AccessToken implements AccessTokenInterface
 
     /**
      * @param array $config
+     *
      * @return mixed|\Psr\Http\Message\ResponseInterface
      */
     public function sendRequest(array $config)

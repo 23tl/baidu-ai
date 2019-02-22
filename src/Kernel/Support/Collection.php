@@ -51,6 +51,7 @@ class Collection implements ArrayAccess, Countable, IteratorAggregate, JsonSeria
 
     /**
      * @param array $keys
+     *
      * @return Collection
      */
     public function only(array $keys)
@@ -84,6 +85,7 @@ class Collection implements ArrayAccess, Countable, IteratorAggregate, JsonSeria
 
     /**
      * @param $items
+     *
      * @return Collection
      */
     public function merge($items)
